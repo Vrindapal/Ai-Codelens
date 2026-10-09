@@ -1,0 +1,46 @@
+{
+  "name": "codelens-ai",
+  "displayName": "CodeLens AI",
+  "description": "AI-powered code intelligence assistant",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:codelens-ai.analyze"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codelens-ai.analyze",
+        "title": "CodeLens AI: Analyze Selected Code"
+      },
+      {
+        "command": "codelens-ai.fix",
+        "title": "CodeLens AI: Fix Selected Code"
+      },
+      {
+        "command": "codelens-ai.explain",
+        "title": "CodeLens AI: Explain Selected Code"
+      },
+      {
+        "command": "codelens-ai.quality",
+        "title": "CodeLens AI: Check Code Quality"
+      }
+    ],
+    "themes": [
+      {
+        "label": "codelens-ai",
+        "uiTheme": "vs-dark",
+        "path": "./themes/codelens-ai-color-theme.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "axios": "^1.0.0"
+  }
+}
